@@ -43,7 +43,7 @@ Follow the steps below to properly set up and run the application.
   - Install the plugin from the Atlassian Marketplace. 
   - Once installed, click on the Configure button for the plugin to set the required parameters:
     - `Panel Title` - Set the title of the time tracking panel on Jira issues page    // example: Devexperts Time Tracker
-    - `Host` - Set the host name of the server with Time Tracker application // example: http://time-tracker.example.com
+    - `Host` - Set the host name of the server with Time Tracker application // example: `http:// time-tracker.example.com`
     - `Port` - Set the port number of the host // example: 80 
     - `Websocket Address` - Set the address of the websocket server (should be similar to `Host` and match the pattern: "wss://{..}/ws/sse/rtt") // example: wss://time-tracker.example.com/ws/sse/rtt 
     - `Custom Parameters (comma separated)` - Set the custom parameters for the plugin // Leave empty if not needed
