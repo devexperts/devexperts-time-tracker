@@ -66,8 +66,8 @@ For more information, refer to the Atlassian documentation: https://developer.at
   - Click Continue to complete the application link configuration.
 3. Running run.sh script:
   - Open a terminal. Navigate to the link-creation directory.
-  - Run the `./run.sh OAUTH_CONSUMER_KEY JIRA_URL PRIVATE_KEY` command, where JIRA_URL is the URL of the Jira instance and PRIVATE_KEY is the private key provided during the app setup. // example: ./run.sh CONSUMER_KEY http://jira.example.com MIIBCAQ8A...MIIBCgKCAQEAq3
-  - After script finishes, it will output the URL to authorize the application link. // example: http://jira.example.com/plugins/servlet/oauth/authorize?oauth_token=HJgjgjg
+  - Run the `./run.sh OAUTH_CONSUMER_KEY JIRA_URL PRIVATE_KEY` command, where JIRA_URL is the URL of the Jira instance and PRIVATE_KEY is the private key provided during the app setup. // example: ./run.sh CONSUMER_KEY http:// jira.example.com MIIBCAQ8A...MIIBCgKCAQEAq3
+  - After script finishes, it will output the URL to authorize the application link. // example: http:// jira.example.com/plugins/servlet/oauth/authorize?oauth_token=HJgjgjg
 4. Jira administrator steps:
   - Login in Jira as administrator.
   - Open the URL provided by the script in a browser.
