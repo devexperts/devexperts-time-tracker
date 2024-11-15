@@ -15,4 +15,4 @@ At Devexperts, we prioritize the security of our customers’ data. **Devexperts
 We respect our customers’ privacy and do not collect any personal data. All data managed within **Devexperts Time Tracker for Jira** remains solely within the customer’s infrastructure, ensuring complete control and privacy.
 
 # Updates to the Data Security and Privacy Statement
-We may update this Data Security and Privacy Statement periodically. Any updates will be posted on our website, devexperts.com, or on the **Devexperts Time Tracker for Jira** GitHub page, taking effect immediately upon posting.
+We may update this Data Security and Privacy Statement periodically. Any updates will be posted on the **Devexperts Time Tracker for Jira** GitHub page, taking effect immediately upon posting.
