@@ -70,7 +70,7 @@ Pull the worklog up or down by the timeline border
 Set the time manually (by clicking on a 'pen' icon next to time duration).
 Note: you can change duration of the ticket only after stopping time tracking of this ticket. The worklogs cannot intersect.
 
-
+![pull gif](/assets/images/pull.gif)
 
 
 
