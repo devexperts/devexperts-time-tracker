@@ -61,7 +61,7 @@ Note:
 If you click on another ticket while you are tracking, then the current session will be stopped and a new one will be started. Tracking logs less than a minute are not possible and will be discarded.
 If you have an active real time tracking period and a planned worklog (worklog set up for later today), then real time tracking session automatically suspends by the system, once it reaches the planned worklog.
 
-
+![play gif](/assets/images/play.gif)
 
 
 To edit a duration of a worklog:
