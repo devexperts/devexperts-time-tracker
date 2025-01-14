@@ -48,7 +48,7 @@ You may add tickets you work regularly on to 'Favorites'. Find a particular tick
 Basic tracking with JTT
 Use your credentials to login, like it's shown on the picture below:
 
-
+![play in time tracker](/assets/images/login.jpg)
 
     ‌‌‍‍
 
