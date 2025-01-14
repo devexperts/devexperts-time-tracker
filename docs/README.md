@@ -38,7 +38,7 @@ You may start/stop tracking using 'Play' button:
 
 You may add tickets you work regularly on to 'Favorites'. Find a particular ticket, hover on it and a star will appear to its left. Tap on the star and now you should be able find the ticket on the 'Favorites' tab as well.
 
-![play in time tracker](/assets/images/favorite.jpg)
+![favorites in time tracker](/assets/images/favorite.jpg)
 
 
 
@@ -48,7 +48,7 @@ You may add tickets you work regularly on to 'Favorites'. Find a particular tick
 Basic tracking with JTT
 Use your credentials to login, like it's shown on the picture below:
 
-![play in time tracker](/assets/images/login.jpg)
+![login in time tracker](/assets/images/login.jpg)
 
     ‌‌‍‍
 
