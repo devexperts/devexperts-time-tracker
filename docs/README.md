@@ -38,7 +38,7 @@ You may start/stop tracking using 'Play' button:
 
 You may add tickets you work regularly on to 'Favorites'. Find a particular ticket, hover on it and a star will appear to its left. Tap on the star and now you should be able find the ticket on the 'Favorites' tab as well.
 
-
+![play in time tracker](/assets/images/favorite.jpg)
 
 
 
