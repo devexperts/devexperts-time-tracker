@@ -30,7 +30,7 @@ by part of the ticket summary
 
 You may start/stop tracking using 'Play' button:
 
-
+![play in time tracker](/assets/images/play.jpg)
 
 
 
