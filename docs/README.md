@@ -77,12 +77,12 @@ Note: you can change duration of the ticket only after stopping time tracking of
 To delete a worklog from the timeline, hover over the worklog, click on the 'pen' icon and click the appearing 'bin' icon.
 
 
-
+![delete gif](/assets/images/delete.gif)
 
 
 You can also change a ticket during real time tracking: just hover on the mistaken ticket and tap on the ‘pen’ icon on the right and enter a correct name. 
 
-
+![rename gif](/assets/images/rename.gif)
 
 
 
@@ -93,6 +93,8 @@ You can also add worklogs using drag-and-drop function by pulling the ticket fro
 
 
 Set the duration of the worklog:
+
+![drag gif](/assets/images/drag.gif)
 
 Pull the worklog up or down on the timeline (by pulling edges of it, keeping the left button of the mouse),
 Set the time manually (by clicking on 'pen' next to time duration).
