@@ -34,6 +34,8 @@ You may add tickets you work regularly on to **'Favorites'**. Find a particular 
 ![favorites in time tracker](/assets/images/favorite.jpg)
 
 
+
+
 ## Basic tracking with Devexperts Time Tracker
 Use your credentials to **login**, like it's shown on the picture below:
 
@@ -82,6 +84,7 @@ All the worklogs will be saved in Jira automatically.
 ![drag gif](/assets/images/drag.gif)
 
 
+
 ## Advanced tracking with Devexperts Time Tracker
     ‌‌‍‍
 **Short Worklogs**
@@ -125,6 +128,8 @@ Please note that the maximum comment length is 500 symbols.
 To save your comment, click outside a comment area or use the **Ctrl+Enter** hotkey.
 
 ![comment gif](/assets/images/comment.gif)
+
+
 
 ## Reporting
 Using the **"Calendar"** function in Time Tracker you can see time tracked:
