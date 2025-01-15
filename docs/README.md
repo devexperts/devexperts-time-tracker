@@ -1,5 +1,8 @@
 # Devexperts Time Tracker for Jira Overview
 
+* TOC
+{:toc}
+
 **Table of Contents**  
 [Tracking from Jira](#tracking-from-jira)  
 [Time Tracker interface](#time-tracker-interface)  
