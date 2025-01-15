@@ -9,8 +9,7 @@ Jira worklogs. Time can be tracked using Time Tracker both from Jira interface a
 ## Time Tracker interface:
 
 ![Time tracker introduction](/assets/images/Manual_introduction.jpg)
-
-    ‌‌‍‍
+  ‌‌‍‍
 
 **'All of them'** tab under the **'Tickets'** section сontains the full list of tickets available for you to track presented in descending order based on your recent activity:
 - Last time created a worklog,
@@ -32,8 +31,6 @@ You may start/stop tracking using **'Play' button**:
 You may add tickets you work regularly on to **'Favorites'**. Find a particular ticket, hover on it and a star will appear to its left. Tap on the star and now you should be able find the ticket on the **'Favorites'** tab as well.
 
 ![favorites in time tracker](/assets/images/favorite.jpg)
-
-
 
 
 ## Basic tracking with Devexperts Time Tracker
@@ -86,7 +83,7 @@ All the worklogs will be saved in Jira automatically.
 
 
 ## Advanced tracking with Devexperts Time Tracker
-    ‌‌‍‍
+
 **Short Worklogs**
 
 By default, the worklog duration is 20 minutes, but it can be edited to be 1 minute long.
@@ -145,7 +142,7 @@ _Note:_ Time can be tracked up to 10 weeks back
 
    ‌‌‍‍
 ## Keyboard Navigation
-  ‌‌‍‍
+
 You can do most of the routine operations using just a keyboard.
 
 **Navigation**
