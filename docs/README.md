@@ -8,7 +8,7 @@ Jira worklogs. Time can be tracked using JTT both from Jira interface and from T
 
 JTT interface:
 
-![Time tracker intriduction](/assets/images/Manual_introduction.jpg)
+![Time tracker introduction](/assets/images/Manual_introduction.jpg)
 
     ‌‌‍‍
 
