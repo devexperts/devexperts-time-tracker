@@ -149,14 +149,7 @@ Please note that the maximum comment length is 500 symbols.
 
 To save your comment, click outside a comment area or use the Ctrl+Enter hotkey.
 
-
-
-
-
-
-
-
-
+![comment gif](/assets/images/comment.gif)
 
 Reporting
 Using "Calendar" function in JTT you can see time tracked:
