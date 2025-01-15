@@ -1,9 +1,9 @@
 # Devexperts Time Tracker for Jira Overview
 
 **Table of Contents**  
-[Headers](#Tracking from Jira)  
-[Headers](#Time Tracker interface)  
-<a name="headers"/>
+[Tracking from Jira](## Tracking from Jira)  
+[Time Tracker interface](## Time Tracker interface)  
+
 
 
 Devexperts Time Tracker for Jira is a time tracking tool developed by Devexperts. It is integrated with Jira, and tracked time goes directly into 
