@@ -160,7 +160,7 @@ For the week
 Current week or any previous week
 Note: Time can be tracked up to 10 weeks back
 
-![calendar jpg](/assets/images/calendar.jpg)
+![calendar jpg](/assets/images/calendar.jpeg)
 
 
     ‌‌‍‍
