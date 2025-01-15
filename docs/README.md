@@ -83,7 +83,6 @@ All the worklogs will be saved in Jira automatically.
 
 
 ## Advanced tracking with Devexperts Time Tracker
-
 **Short Worklogs**
 
 By default, the worklog duration is 20 minutes, but it can be edited to be 1 minute long.
@@ -142,7 +141,6 @@ _Note:_ Time can be tracked up to 10 weeks back
 
    ‌‌‍‍
 ## Keyboard Navigation
-
 You can do most of the routine operations using just a keyboard.
 
 **Navigation**
@@ -179,7 +177,6 @@ You can do most of the routine operations using just a keyboard.
     ‌‌‍‍
 
 ## Dark Mode
- ‌‌‍‍
 Time Tracker has a dark mode as well.
 
 The dark mode is based on user preferences that are set on the PC, thus applied on the browser.
