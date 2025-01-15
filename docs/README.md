@@ -1,7 +1,7 @@
 # Devexperts Time Tracker for Jira Overview
 
 **Table of Contents**  
-[Tracking from Jira](/##tracking-from-jira)  
+[Tracking from Jira](##tracking-from-jira)  
 [Time Tracker interface](## Time Tracker interface)  
 
 
