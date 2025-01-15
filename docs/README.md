@@ -130,18 +130,13 @@ In zoomed view, the user can create short worklogs with drag and drop (default v
 
 You can hide the ticket you do not want to see in your Tickets list. To do so drag it to the bottom of the page and hover over the 'Hide ticket from here' 
 
-
+![hide gif](/assets/images/hide.gif)
 
 
 
 To restore hidden ticket find it using search and do anything with it, for example, add it to your worklog - it will appear back in your Tickets list.
 
-
-
-
-
-
-
+![restore gif](/assets/images/restore.gif)
 
 
     ‌‌‍‍
