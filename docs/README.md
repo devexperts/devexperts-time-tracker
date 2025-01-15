@@ -110,7 +110,7 @@ By default, the worklog duration is 20 minutes, but it can be edited to be 1 min
 
 Short worklogs can be created either by editing a worklog to less than 20 minutes or by stopping Real time tracking with a duration between 1 and 19 minutes.
 
-
+![less than 20 m gif](/assets/images/less_than_20_mins.gif)
 
 
 
@@ -124,10 +124,7 @@ In the zoomed view, the hours will be highlighted, with a blue box. To exit the 
 
 In zoomed view, the user can create short worklogs with drag and drop (default value of worklog in zoomed view is 1 minute), start real time tracking, delete or edit worklogs, as you would do with normal worklogs.
 
-
-
-
-
+![editing in zoom view gif](/assets/images/editing_in_zoom_view.gif)
 
     ‌‌‍‍
 
