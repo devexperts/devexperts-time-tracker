@@ -160,14 +160,7 @@ For the week
 Current week or any previous week
 Note: Time can be tracked up to 10 weeks back
 
-
-
-
-
-
-
-
-
+![calendar jpg](/assets/images/calendar.jpg)
 
 
     ‌‌‍‍
@@ -211,8 +204,10 @@ NVDA Screen Reader hints are now available!
     ‌‌‍‍
 
 Dark Mode
-    ‌‌‍‍
+ ‌‌‍‍
 
 JTT has a dark mode as well.
 
 The dark mode is based on user preferences that are set on the PC, thus applied on the browser.
+
+![dark jpg](/assets/images/dark.jpg)
