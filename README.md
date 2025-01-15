@@ -26,7 +26,6 @@ Follow the steps below to properly set up and run the application.
 - `README.md` - Instructions for using the deployment package.
 - `log4j.properties` - Log4j configuration file for Jira plugin.
 - `LICENSE` - License file.
-- `Devexperts Time Tracker Manual.pdf` - User manual for the Time Tracker App.
 
 ## Prerequisites
 
