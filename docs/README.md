@@ -1,4 +1,4 @@
-# Devexperts Time Tracker for Jira Overview
+# Devexperts Time Tracker for Jira Overview <!-- omit in toc -->
 
 * TOC
 {:toc}
