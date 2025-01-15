@@ -94,13 +94,11 @@ You can also add worklogs using drag-and-drop function by pulling the ticket fro
 
 Set the duration of the worklog:
 
-![drag gif](/assets/images/drag.gif)
-
 Pull the worklog up or down on the timeline (by pulling edges of it, keeping the left button of the mouse),
 Set the time manually (by clicking on 'pen' next to time duration).
 All the worklogs will be saved in Jira automatically. 
 
-
+![drag gif](/assets/images/drag.gif)
 
 
 Advanced tracking with JTT
