@@ -5,7 +5,7 @@
 [Time Tracker interface](#time-tracker-interface)  
 [Basic tracking with Devexperts Time Tracker](#basic-tracking-with-devexperts-time-tracker)  
 [Advanced tracking with Devexperts Time Tracker](#advanced-tracking-with-devexperts-time-tracker) 
-[Reporting](#reporting)  
+[Reporting](-#reporting)  
 [Keyboard Navigation](#keyboard-navigation)  
 [Dark Mode](#dark-mode)  
 
