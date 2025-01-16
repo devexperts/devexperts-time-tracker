@@ -141,7 +141,7 @@ Using the **"Calendar"** function in Time Tracker you can see time tracked:
 
 _Note:_ Time can be tracked up to 10 weeks back
 
-![calendar jpg](/assets/images/calendar.jpeg)
+![calendar jpg](/assets/images/calendar-small.jpeg)
 
    ‌‌‍‍
 ## Keyboard Navigation
