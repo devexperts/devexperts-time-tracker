@@ -1,6 +1,11 @@
 # DEVEXPERTS TIME TRACKER FOR JIRA
 
-This package contains everything you need to set up, configure, and run the Devexperts Time Tracker For Jira App within Docker containers. It also includes detailed instructions for integrating the app with an existing Jira instance by creating an application link, installing and configuring the Jira plugin, and initializing the environment.
+Devexperts Time Tracker for Jira is a comprehensive time-tracking solution developed by [Devexperts](https://devexperts.com/), comprising:
+- Jira plugin [Devexperts Time Tracker for Jira](https://marketplace.atlassian.com/apps/1236146)
+- Dockerized standalone web application
+- Dockerized standalone backend service
+
+This package contains everything you need to set up, configure, and run the Devexperts Time Tracker For Jira we application and backend service. It also includes detailed instructions for integrating the solution with an existing Jira instance by creating an application link, installing and configuring the Jira plugin, and initializing the environment.
 
 Follow the steps below to properly set up and run the application.
 
