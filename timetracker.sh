@@ -45,7 +45,7 @@ case $1 in
     docker_login
     docker volume create backend
     docker volume create dumps
-    envsubst '${JTT_WEBAPP_HOST} ${FULL_CHAIN_PEM} ${PRIVATE_KEY_PEM} ${DH_PEM}' < jtt-proxy/nginx.conf.template > jtt-proxy/nginx.conf
+    envsubst '${JTT_WEBAPP_HOST} ${FULL_CHAIN_PEM} ${PRIVATE_KEY_PEM} ${DH_PEM}' < proxy/nginx.conf.template > proxy/nginx.conf
     ;;
   start)
     docker-compose up -d
