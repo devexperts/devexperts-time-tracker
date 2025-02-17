@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   jtt-webapp:
-    image: "nexus-docker-time-tracking.in.devexperts.com/jira-time-tracking-app/jtt-webapp:build${VERSION_NUMBER}"
+    image: "ghcr.io/devexperts/devexperts-time-tracker/jtt-webapp:build${VERSION_NUMBER}"
     container_name: jtt-webapp-build${VERSION_NUMBER}
     restart: always
     ports:
@@ -26,6 +26,7 @@ services:
       - OAUTH_ACCESS_TOKEN=${OAUTH_ACCESS_TOKEN}
       - OAUTH_PRIVATE_KEY=${OAUTH_PRIVATE_KEY}
       - OAUTH_SECRET=${OAUTH_SECRET}
+      - AUTHORIZATION_TYPE=OAUTH
     volumes:
       - dumps:/opt/dumps
       - ../log:/log
@@ -64,7 +65,7 @@ services:
       - backend
 
   jtt-ui:
-    image: "nexus-docker-time-tracking.in.devexperts.com/jira-time-tracking-app/jtt-ui:build${VERSION_NUMBER}"
+    image: "ghcr.io/devexperts/devexperts-time-tracker/jtt-ui:build${VERSION_NUMBER}"
     container_name: jtt-ui-build${VERSION_NUMBER}
     ports:
       - "127.0.0.1:8081:80"

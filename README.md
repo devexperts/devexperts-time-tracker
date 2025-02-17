@@ -13,6 +13,7 @@ Follow the steps below to properly set up and run the application.
 
 - `.env` - Environment variables file. // Provide your own values for the variables following the instructions in this file
 - `docker-compose.yaml` - Docker Compose configuration file.
+- `docker-compose.no-ssl.yaml` - Additional Docker Compose configuration file for running without SSL certificates.
 - `timetracker.sh` - Shell script for Linux/macOS/Windows systems.
 - `proxy / `
     - `nginx.conf` - Nginx configuration file.
@@ -100,8 +101,6 @@ JIRA_URL= # Set your Jira URL
 JTT_WEBAPP_HOST= # Set the url of the current machine
 FULL_CHAIN_PEM= # Set the name of the full chain certificate file in ./jtt-proxy
 PRIVATE_KEY_PEM= # Set the name of the private key file in ./jtt-proxy
-DOCKER_USERNAME= # Set your Docker username received in advance
-DOCKER_PASSWORD= # Set your Docker password received in advance
 ```
 
 ### Step 4: Run `timetracker.sh` to Start the Services
@@ -110,11 +109,13 @@ DOCKER_PASSWORD= # Set your Docker password received in advance
 2. Navigate to the directory containing the deployment package.
 3. Run the script with one of the following commands:
   ```sh
-  ./timetracker.sh init      # To initialize the setup - Run this once
-  ./timetracker.sh start     # To start the services
-  ./timetracker.sh stop      # To stop the services
-  ./timetracker.sh restart   # To restart the web application service
-  ./timetracker.sh update    # To update the web application service
+  ./timetracker.sh init           # To initialize the setup - Run this once
+  ./timetracker.sh init-no-ssl    # To initialize the setup without SSL certificates - Run this once
+  ./timetracker.sh start          # To start the services
+  ./timetracker.sh start-no-ssl   # To start the services except for proxy without SSL certificates
+  ./timetracker.sh stop           # To stop the services
+  ./timetracker.sh restart        # To restart the web application service
+  ./timetracker.sh update         # To update the web application service
   ```
 
 ## Notes
