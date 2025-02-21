@@ -16,7 +16,7 @@ Follow the steps below to properly set up and run the application.
 - `docker-compose.no-ssl.yaml` - Additional Docker Compose configuration file for running without SSL certificates.
 - `timetracker.sh` - Shell script for Linux/macOS/Windows systems.
 - `proxy / `
-    - `nginx.conf` - Nginx configuration file.
+    - `nginx.conf.template` - Template for creating Nginx configuration file with SSL certificates.
     - `privkey.pem` - Private key file. // Provide your own key file and update the environment variable 'PRIVATE_KEY_PEM' with the file name
     - `fullchain.pem` - Full chain certificate file. // Provide your own certificate file and update the environment variable 'FULL_CHAIN_PEM' with the file name
 - `ui-nginx / ` 
@@ -36,8 +36,7 @@ Follow the steps below to properly set up and run the application.
 ## Prerequisites
 
 * Ensure you have Docker and Docker Compose installed on your system.
-* Obtain the necessary Docker credentials to access private Docker images and set the `DOCKER_USERNAME` and `DOCKER_PASSWORD` environment variables in the `.env` file.
-* Ensure that the server host where the application will run is whitelisted for network access.
+
 
 ## Setup Instructions
 
@@ -99,8 +98,10 @@ OAUTH_PRIVATE_KEY= # Set your OAuth private key
 OAUTH_SECRET= # Set your OAuth secret
 JIRA_URL= # Set your Jira URL
 JTT_WEBAPP_HOST= # Set the url of the current machine
-FULL_CHAIN_PEM= # Set the name of the full chain certificate file in ./jtt-proxy
-PRIVATE_KEY_PEM= # Set the name of the private key file in ./jtt-proxy
+
+Proxy Configuration (not required if running without SSL certificates):
+FULL_CHAIN_PEM= # Set the name of the full chain certificate file in ./proxy
+PRIVATE_KEY_PEM= # Set the name of the private key file in ./proxy
 ```
 
 ### Step 4: Run `timetracker.sh` to Start the Services

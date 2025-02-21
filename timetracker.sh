@@ -32,14 +32,13 @@ case $1 in
   init)
     check_env_var "FULL_CHAIN_PEM"
     check_env_var "PRIVATE_KEY_PEM"
-    docker volume create backend
+    docker network create backend
     docker volume create dumps
     envsubst '${JTT_WEBAPP_HOST} ${FULL_CHAIN_PEM} ${PRIVATE_KEY_PEM}' < proxy/nginx.conf.template > proxy/nginx.conf
     ;;
   init-no-ssl)
-    docker volume create backend
+    docker network create backend
     docker volume create dumps
-    envsubst '${JTT_WEBAPP_HOST}' < proxy/nginx.conf.template > proxy/nginx.conf
     ;;
   start)
     docker-compose up -d
