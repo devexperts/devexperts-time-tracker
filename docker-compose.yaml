@@ -27,6 +27,7 @@ services:
       - OAUTH_PRIVATE_KEY=${OAUTH_PRIVATE_KEY}
       - OAUTH_SECRET=${OAUTH_SECRET}
       - AUTHORIZATION_TYPE=OAUTH
+      - LOG_LEVEL=${LOG_LEVEL}
     volumes:
       - dumps:/opt/dumps
       - ../log:/log
@@ -71,6 +72,10 @@ services:
       - "127.0.0.1:8081:80"
       - "127.0.0.1:6006:6006"
     restart: always
+    environment:
+      - REACT_APP_DOMAIN=
+      - REACT_APP_MANUAL=https://devexperts.github.io/devexperts-time-tracker/
+      - APPLICATION_TITLE=Devexperts Time Tracker
     volumes:
       - ./ui-nginx:/etc/nginx/
       - ./custom_images:/usr/share/nginx/html/custom_images
