@@ -63,8 +63,8 @@ Follow the steps below to properly set up and run the application.
 
 2. **Verify the Web Application is Running**
     - Open your browser and go to:
-      - With SSL: https://your-webapp-domain
-      - Without SSL: http://localhost:8081
+      - With SSL: `https://your-webapp-domain`
+      - Without SSL: `http://localhost:8081`
     - Ensure the page loads without errors (login/authentication issues can be ignored for now).
     - Check container logs for any issues: `docker logs -f jtt-webapp`
 
