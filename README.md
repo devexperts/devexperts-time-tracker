@@ -50,11 +50,15 @@ Follow the steps below to properly set up and run the application.
     - Open a terminal and navigate to the deployment directory. 
     - Run one of the following commands based on your setup:
       - With SSL:
-          `./timetracker.sh init`
-          `./timetracker.sh start`
+      ```sh
+      ./timetracker.sh init
+      ./timetracker.sh start
+      ```
       - Without SSL:
-          `./timetracker.sh init-no-ssl`
-          `./timetracker.sh start-no-ssl`
+      ```sh
+      ./timetracker.sh init-no-ssl
+      ./timetracker.sh start-no-ssl
+      ```
     - Verify that all required containers are running using: `docker ps`
 
 2. **Verify the Web Application is Running**
