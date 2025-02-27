@@ -45,7 +45,26 @@ Follow the steps below to properly set up and run the application.
 
 ## Setup Instructions
 
-### Step 1: Install and Configure Devexperts Time Tracker for Jira Plugin
+### Step 1: Ensure the Web Application starts successfully
+1. **Start the Web Application**
+    - Open a terminal and navigate to the deployment directory. 
+    - Run one of the following commands based on your setup:
+      - With SSL:
+          `./timetracker.sh init`
+          `./timetracker.sh start`
+      - Without SSL:
+          `./timetracker.sh init-no-ssl`
+          `./timetracker.sh start-no-ssl`
+    - Verify that all required containers are running using: `docker ps`
+
+2. **Verify the Web Application is Running**
+    - Open your browser and go to:
+      - With SSL: https://your-webapp-domain
+      - Without SSL: http://localhost:8081
+    - Ensure the page loads without errors (login/authentication issues can be ignored for now).
+    - Check container logs for any issues: `docker logs -f jtt-webapp`
+
+### Step 2: Install and Configure Devexperts Time Tracker for Jira Plugin
 - Log in to your Jira instance as an administrator.
 - Navigate to **Jira Administration > Manage apps**.
 - Click on **Find new apps** or **Find new add-ons** and search for **Devexperts Time Tracker for Jira**.
@@ -57,7 +76,7 @@ Follow the steps below to properly set up and run the application.
     - `Websocket Address` - Set the address of the WebSocket server (should match the `Host` pattern: `wss://{..}/ws/sse/rtt`).
     - `Custom Parameters (comma separated)` - Optional; leave empty if not needed.
 
-### Step 2: Create an Application Link in Jira
+### Step 3: Create an Application Link in Jira
 
 This step creates a secure connection between the Jira instance and the Time Tracker App.
 For more information, refer to the Atlassian documentation: https://developer.atlassian.com/server/jira/platform/oauth
@@ -82,6 +101,7 @@ For more information, refer to the Atlassian documentation: https://developer.at
       ```sh
       ./run.sh OAUTH_CONSUMER_KEY JIRA_URL PRIVATE_KEY
       ```
+      *Paste the content of the private key file without the PEM delimiters.*
       Example:
       ```sh
       ./run.sh CONSUMER_KEY http://jira.example.com MIIBCAQ8A...
@@ -94,32 +114,33 @@ For more information, refer to the Atlassian documentation: https://developer.at
       ```
     - After script finishes, it will output the access token.
 
-### Step 3: Configure Environment Variables
+### Step 4: Configure Environment Variables
 
 Update the `.env` file with required details before running the application:
 
 ```ini
-VERSION_NUMBER= # Build version
+VERSION_NUMBER: Build version
 OAUTH_CONSUMER_KEY: Set the OAuth consumer key generated in Step 2.
 OAUTH_ACCESS_TOKEN: Set the OAuth access token generated in Step 2.
 OAUTH_PRIVATE_KEY: Set the OAuth private key generated in Step 2 (without PEM delimiters).
 OAUTH_SECRET: Set the OAuth secret (VERIFICATION_CODE) generated in Step 2.
-JIRA_URL= # Jira instance URL
-JTT_WEBAPP_HOST= # Host of the Time Tracker application without http prefix
-LOG_LEVEL= # Log level (DEBUG, INFO, WARN, ERROR)
+JIRA_URL: Jira instance URL with http prefix (e.g., http://jira.example.com)
+JTT_WEBAPP_HOST: Host of the Time Tracker application without http prefix (e.g., time-tracker.example.com)
+LOG_LEVEL: Log level (DEBUG, INFO, WARN, ERROR)
 
 # Proxy Configuration (only if using SSL)
 FULL_CHAIN_PEM= # Certificate file name
 PRIVATE_KEY_PEM= # Private key file name
 ```
 
-### Step 4: Start the Services
+### Step 5: Start the Services
 
 Run the setup script with the appropriate command:
 ```sh
 ./timetracker.sh init           # Initialize the setup (run once)
 ./timetracker.sh init-no-ssl    # Initialize without SSL (run once)
 ./timetracker.sh start          # Start all services
+./timetracker.sh start-no-ssl   # Start all services without SSL
 ./timetracker.sh stop           # Stop services
 ./timetracker.sh restart        # Restart the web application
 ./timetracker.sh update         # Update and restart the web application
