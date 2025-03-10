@@ -36,8 +36,11 @@ Follow the steps below to properly set up and run the application.
 ## Prerequisites
 
 - Ensure you have Docker and Docker Compose installed on your system.
-- Ensure that ports 8080, 8081, 6006 and 5432 are free on your system.
+- Ensure you have Java installed on your system.
 - A working Jira instance where you have administrator access.
+- Ensure that ports **8080, 8081, 6006 and 5432** are free on your system.
+- If you plan to use the provided **proxy container**, ensure that **ports 80 and 443** are free on your system.
+- If you use your **own proxy**, make sure to apply the necessary configuration from `proxy/nginx.conf.template` to match your setup.
 
 ## Local Run Notes
 
@@ -75,8 +78,10 @@ Follow the steps below to properly set up and run the application.
 - Install the plugin from the Atlassian Marketplace.
 - Once installed, click **Configure** and set the required parameters:
     - `Panel Title` - Set the title of the time tracking panel on the Jira issue page (e.g., **Devexperts Time Tracker**).
-    - `Host` - Set the host name of the server running the Time Tracker application (e.g., `http://time-tracker.example.com`).
-    - `Port` - Set the port number of the host (e.g., `80`).
+    - `Host` - Set the host name of the server running the Time Tracker application (e.g., `http://time-tracker.example.com` for HTTP or `https://time-tracker.example.com` for HTTPS).
+    - `Port` - Set the port number of the host:
+      - Use **80** for HTTP connections.
+      - Use **443** for HTTPS connections.
     - `Websocket Address` - Set the address of the WebSocket server (should match the `Host` pattern: `wss://{..}/ws/sse/rtt`).
     - `Custom Parameters (comma separated)` - Optional; leave empty if not needed.
 
@@ -157,3 +162,56 @@ Run the setup script with the appropriate command:
 - If using SSL, ensure certificates are configured correctly in the `proxy` directory.
 - To enable separate logs for the Jira plugin, append `log4j.properties` settings to the existing Jira log configuration.
 - Run `./timetracker.sh update` to pull the latest version and restart services.
+
+## Appendix: Creating Self-Signed Certificates
+
+### Step 1: Install Certbot
+Debian/Ubuntu:
+```sh
+sudo apt install certbot
+```
+RHEL/CentOS:
+```sh
+sudo dnf install certbot
+```
+
+### Step 2: Obtain an SSL Certificate
+1. Stop Your Web Server (if necessary)
+   If Certbot needs to bind to port 80 for validation, you may need to stop any service using this port (e.g., Nginx, Apache, HAProxy). 
+   If you have already set up the Time Tracker app, stop the proxy container as it also uses port 80 on the host.
+
+2. Check firewall rules
+   If you have any firewall enabled, you'll need to change the settings to allow for HTTPS traffic. (ufw, firewalld, etc)
+
+3. Generate certificate
+```sh
+sudo certbot certonly --standalone -d <domain-name>
+```
+*Note: <domain-name> must match the value of `JTT_WEBAPP_HOST` in your .env file.*
+
+The first time you run Certbot, it will prompt you for an email address for renewal notifications.
+You will also need to accept the Let's Encrypt terms of service.
+Certbot will then validate your domain and issue a certificate.
+Once completed, your certificate will be located in:
+```sh
+/etc/letsencrypt/live/<domain-name>/
+```
+
+4. Copy the SSL Keys to the Proxy Directory
+   Copy the generated certificate files to the proxy/ directory (used by the proxy container):
+
+```sh
+cp /etc/letsencrypt/live/<domain-name>/privkey.pem proxy/
+cp /etc/letsencrypt/live/<domain-name>/fullchain.pem proxy/
+```
+*Ensure the file names match the values of `FULL_CHAIN_PEM` and `PRIVATE_KEY_PEM` in your .env file.*
+
+
+5. Update the .env File
+   Modify the .env file with the correct values:
+
+```ini
+JTT_WEBAPP_HOST=<domain-name>  # Match the domain name used in Step 2.3
+FULL_CHAIN_PEM=fullchain.pem
+PRIVATE_KEY_PEM=privkey.pem
+```
