@@ -135,6 +135,7 @@ OAUTH_PRIVATE_KEY: Set the OAuth private key generated in Step 2 (without PEM de
 OAUTH_SECRET: Set the OAuth secret (VERIFICATION_CODE) generated in Step 2.
 JIRA_URL: Jira instance URL with http prefix (e.g., http://jira.example.com)
 JTT_WEBAPP_HOST: Host of the Time Tracker application without http prefix (e.g., time-tracker.example.com)
+BACKEN_URL: URL of the Time Tracker application with http prefix (e.g., http://time-tracker.example.com or http://host.docker.internal:8080 for local run)
 LOG_LEVEL: Log level (DEBUG, INFO, WARN, ERROR)
 
 # Proxy Configuration (only if using SSL)

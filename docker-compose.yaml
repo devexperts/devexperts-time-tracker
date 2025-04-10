@@ -76,6 +76,7 @@ services:
       - REACT_APP_DOMAIN=
       - REACT_APP_MANUAL=https://devexperts.github.io/devexperts-time-tracker/
       - APPLICATION_TITLE=Devexperts Time Tracker
+      - BACKEND_URL=${BACKEND_URL}
     volumes:
       - ./ui-nginx:/etc/nginx/
       - ./custom_images:/usr/share/nginx/html/custom_images
