@@ -216,3 +216,11 @@ JTT_WEBAPP_HOST=<domain-name>  # Match the domain name used in Step 2.3
 FULL_CHAIN_PEM=fullchain.pem
 PRIVATE_KEY_PEM=privkey.pem
 ```
+
+## Licensing
+
+Please note that different components of the Devexperts Time Tracker for Jira solution are subject to different licensing terms:
+- Jira plugin [Devexperts Time Tracker for Jira](https://marketplace.atlassian.com/apps/1236146), licensed under a private license
+- Standalone web application, licensed under a private license
+- Standalone backend service, licensed under a private license
+- Installer of standalone web and backend applications (the focus of this repository) , licensed under the Mozilla Public License Version 2.0
