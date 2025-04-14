@@ -36,9 +36,10 @@ services:
     expose:
       - "8080"
 
-  jtt-proxy:
+  jtt-proxy-ssl:
     image: nginx:latest
-    container_name: jtt-proxy
+    container_name: jtt-proxy-ssl
+    profiles: ["proxy-ssl"]
     volumes:
       - ./proxy/${FULL_CHAIN_PEM}:/etc/nginx/fullchain.pem
       - ./proxy/${PRIVATE_KEY_PEM}:/etc/nginx/privkey.pem
@@ -46,6 +47,17 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    networks:
+      - backend
+
+  jtt-proxy-no-ssl:
+    image: nginx:latest
+    container_name: jtt-proxy-no-ssl
+    profiles: ["proxy-no-ssl"]
+    volumes:
+      - ./proxy/nginx.no-ssl.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
     networks:
       - backend
 

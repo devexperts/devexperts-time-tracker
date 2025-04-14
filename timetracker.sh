@@ -28,34 +28,43 @@ check_env_var "OAUTH_SECRET"
 check_env_var "JIRA_URL"
 check_env_var "JTT_WEBAPP_HOST"
 
+compose_ssl="docker-compose --profile proxy-ssl"
+compose_no_ssl="docker-compose --profile proxy-no-ssl"
+
 case $1 in
   init)
     check_env_var "FULL_CHAIN_PEM"
     check_env_var "PRIVATE_KEY_PEM"
-    docker network create backend
-    docker volume create dumps
+    docker network create backend 2>/dev/null || true
+    docker volume create dumps 2>/dev/null || true
     envsubst '${JTT_WEBAPP_HOST} ${FULL_CHAIN_PEM} ${PRIVATE_KEY_PEM}' < proxy/nginx.conf.template > proxy/nginx.conf
     ;;
   init-no-ssl)
-    docker network create backend
-    docker volume create dumps
+    docker network create backend 2>/dev/null || true
+    docker volume create dumps 2>/dev/null || true
+    envsubst '${JTT_WEBAPP_HOST}' < proxy/nginx.no-ssl.conf.template > proxy/nginx.no-ssl.conf
     ;;
   start)
-    docker-compose up -d
+    $compose_ssl up -d
     ;;
   start-no-ssl)
-    docker-compose -f docker-compose.yaml -f docker-compose.no-ssl.yaml up -d
+    $compose_no_ssl up -d
     ;;
   stop)
-    docker-compose down
+    $compose_ssl down
+    ;;
+  stop-no-ssl)
+    $compose_no_ssl down
     ;;
   restart)
-    docker-compose down && docker-compose up -d
+    $compose_ssl down && $compose_ssl up -d
+    ;;
+  restart-no-ssl)
+    $compose_no_ssl down && $compose_no_ssl up -d
     ;;
   update)
-    docker-compose down
-    docker_login
-    docker-compose up -d
+    $compose_ssl down
+    $compose_ssl up -d
     ;;
   *)
     echo "Unknown parameter. Doing nothing"
