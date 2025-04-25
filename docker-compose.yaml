@@ -9,7 +9,6 @@ services:
       - "127.0.0.1:8080:8080"
     environment:
       - WAIT_HOSTS=jtt-postgres:5432
-      - JAVA_TOOL_OPTIONS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
       - VERSION=build${VERSION_NUMBER}
       - SPRING_PROFILES_ACTIVE=local,docker
       - JIRA_URL=${JIRA_URL}
